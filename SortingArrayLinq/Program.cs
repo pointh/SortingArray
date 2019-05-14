@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SortingArray
 {
-    class Point : IComparable
+    class Point
     {
         public double X { get; set; }
         public double Y { get; set; }
@@ -14,17 +14,13 @@ namespace SortingArray
         {
             return Math.Sqrt(X * X + Y * Y);
         }
-        public int CompareTo(object p)
-        {
-            return this.DistanceTo0() < (p as Point).DistanceTo0() ? -1 : 1;
-        }
-
+        
         public override string ToString()
         {
             return string.Format("X: {0}, Y: {1}, Dist: {2}", X, Y, DistanceTo0());
         }
     }
-    
+
     class Program
     {
         static void Main(string[] args)
@@ -35,14 +31,18 @@ namespace SortingArray
 
             Point[] points = { p, q, r };
 
-            foreach ( var v in points )
+           
+            foreach (var v in points)
                 Console.WriteLine(v);
 
-            Console.WriteLine("\n---------- Po setřídění IComparable ----------\n");
+            Console.WriteLine("\n---------- Po setřídění LINQ ----------\n");
 
-            Array.Sort(points);
+            var sorted = from point in points
+                         orderby point.DistanceTo0()
+                         select point;
+                         //select point.DistanceTo0();
 
-            foreach (var v in points)
+            foreach (var v in sorted)
                 Console.WriteLine(v);
 
             Console.ReadLine();

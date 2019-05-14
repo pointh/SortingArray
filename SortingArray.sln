@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortingArray", "SortingArray\SortingArray.csproj", "{13A65DDF-8FF9-4B28-B08F-1C48E56475AD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortingArrayLinq", "SortingArrayLinq\SortingArrayLinq.csproj", "{0ABBD527-8F08-4958-9877-2DC25F49EBBF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{13A65DDF-8FF9-4B28-B08F-1C48E56475AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13A65DDF-8FF9-4B28-B08F-1C48E56475AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13A65DDF-8FF9-4B28-B08F-1C48E56475AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0ABBD527-8F08-4958-9877-2DC25F49EBBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ABBD527-8F08-4958-9877-2DC25F49EBBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0ABBD527-8F08-4958-9877-2DC25F49EBBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0ABBD527-8F08-4958-9877-2DC25F49EBBF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
