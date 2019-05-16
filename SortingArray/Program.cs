@@ -6,6 +6,14 @@ using System.Threading.Tasks;
 
 namespace SortingArray
 {
+    class PointComparer : IComparer<Point>
+    {
+        public int Compare(Point p, Point q)
+        {
+            return p.X < q.X ? -1 : 1;
+        }
+    }
+
     class Point : IComparable
     {
         public double X { get; set; }
@@ -19,6 +27,7 @@ namespace SortingArray
             return this.DistanceTo0() < (p as Point).DistanceTo0() ? -1 : 1;
         }
 
+        
         public override string ToString()
         {
             return string.Format("X: {0}, Y: {1}, Dist: {2}", X, Y, DistanceTo0());
@@ -38,9 +47,16 @@ namespace SortingArray
             foreach ( var v in points )
                 Console.WriteLine(v);
 
-            Console.WriteLine("\n---------- Po setřídění IComparable ----------\n");
+            Console.WriteLine("\n\n---------- Po setřídění IComparable CompareTo (vzdálenost od (0, 0) ----------\n");
 
             Array.Sort(points);
+            
+            foreach (var v in points)
+                Console.WriteLine(v);
+
+            Console.WriteLine("\n\n---------- Po setřídění PointComparer (velikost X) ----------\n");
+
+            Array.Sort(points, new PointComparer());
 
             foreach (var v in points)
                 Console.WriteLine(v);

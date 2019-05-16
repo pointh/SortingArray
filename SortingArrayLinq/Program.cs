@@ -35,14 +35,23 @@ namespace SortingArray
             foreach (var v in points)
                 Console.WriteLine(v);
 
-            Console.WriteLine("\n---------- Po setřídění LINQ ----------\n");
+            Console.WriteLine("\n\n---------- Po setřídění LINQ podle vzdálenosti od (0, 0) ----------\n");
 
-            var sorted = from point in points
+            var sortedByDistance0 = from point in points
                          orderby point.DistanceTo0()
                          select point;
-                         //select point.DistanceTo0();
+                         //select point.DistanceTo0(; // když chceš zobrazit jen vzdálenost
 
-            foreach (var v in sorted)
+            foreach (var v in sortedByDistance0)
+                Console.WriteLine(v);
+
+            Console.WriteLine("\n\n---------- Po setřídění LINQ podle souřadnice X ----------\n");
+
+            var sortedByX = from point in points
+                                    orderby point.X
+                                    select point;
+
+            foreach (var v in sortedByX)
                 Console.WriteLine(v);
 
             Console.ReadLine();
