@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace SortingArray
 {
     // Tohle je komentář od Paint
+    // Druhý komentář
     class PointComparer : IComparer<Point>
     {
         public int Compare(Point p, Point q)
