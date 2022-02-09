@@ -9,6 +9,7 @@ namespace SortingArray
     // Tohle je komentář od Paint
     // Druhý komentář
     // Třetí komentář
+    // Feature komentář pro novou funkcionalitu
     class PointComparer : IComparer<Point>
     {
         public int Compare(Point p, Point q)
